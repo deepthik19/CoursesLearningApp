@@ -24,10 +24,11 @@ import { CoursesService } from './courses.service';
         <br/><input (keyup.enter)="onEventEnter()"/>
         <br/>Email: <input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
         <br/> {{ course.title | uppercase | lowercase  }}
+        <br/> {{ course.title | summary:10  }}
         <br/> {{ course.rating | number:'2.1-1'   }}
         <br/> {{ course.students | number }}
         <br/> {{ course.releasedate | date:'shortDate'  }}
-        <br/> {{ course.price | currency:'INR':true:'3.2-2'  }}`
+        <br/> {{ course.price | currency:'INR':'symbol':'3.2-2'  }}`
 })
 export class CoursesComponent{
     title="List of Courses";
@@ -38,7 +39,7 @@ export class CoursesComponent{
     //courses=["course1","course2","course3"];
     courses;
     course={
-        title:'this is couRse',
+        title:'this is couRse for angular',
         rating:32.123,
         students:34563,
         releasedate:new Date(2016,3,1),
