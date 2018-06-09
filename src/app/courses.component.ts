@@ -11,7 +11,7 @@ import { CoursesService } from './courses.service';
                 {{course}}
             </li>
         </ul>
-        <img [src]="imgURL" width="500" height="300"/>
+        <br/><img [src]="imgURL" width="500" height="300"/>
         <table>
          <tr>
          <td [attr.colspan]="colSpan"></td>
